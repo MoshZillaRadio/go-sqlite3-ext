@@ -9,12 +9,12 @@ func TestOpenReturnsWithoutError(t *testing.T) {
 	db, err := sql.Open("sqlite3-ext", ":memory:")
 
 	if err != nil {
-		t.Fatalf(err.Error())
+		t.Fatalf("%s", err.Error())
 	}
 
 	err = db.Ping()
 
 	if err != nil {
-		t.Fatalf(err.Error())
+		t.Fatalf("%s", err.Error())
 	}
 }
